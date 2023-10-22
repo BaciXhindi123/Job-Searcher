@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c3ccefe88c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/main.css"/>
+    <link rel="stylesheet" href="./style/content.css">
+    <link rel="stylesheet" href="./style/blogs.css">
+
+
+    <title>Pune Kerkues</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div>
+                <div class="links">
+                    <a href="#">Punet</a>
+                    <a href="#">Companite</a>
+                    <a href="#">Blogjet</a>
+                    <button id="post-job">POSTO NJE PUNE</button>
+                    <div style="display:inline;margin-left:100px;">
+                    <span id="username" style="display:none;font-weight:bold;"></span>
+                    <button id="login"><i class="far fa-address-book"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+            <!-- This secion below contains hidden forms -->
+        <div class="create_job_form">
+            <h2>Posto Nje Pune</h2>
+            <p>Vendos Titullin e Punes:<span>*</span></p>
+            <input id="create-job-title" style="width:100%;" spellcheck="false" type="text"/>
+            <div class="create_job_attributes">
+                <div>
+                    <p>Punedhenesi:<span>*</span></p>
+                    <input id="create-job-company" type="text" spellcheck="false" placeholder="Full name...">
+                </div>
+
+                <div>
+                    <p>Vendosni vendndodhjen:<span>*</span></p>
+                    <input id="create-job-location" type="text" spellcheck="false" placeholder="Address , City , Country">
+                </div>
+            </div> 
+            <p>Vendosni Pershkrimin e Punes<span>*</span></p>
+            <textarea id="create-job-description" rows="5" spellcheck="false" placeholder="Write Somethings About it..."></textarea>
+            <p>Aftesia e Pare e detyruar:<span>*</span></p>
+            <input id="create-job-skill1" class="skill skill1" spellcheck="false" style="width:100%;" placeholder="Applicant must be able to ...."type="text"/>
+            <p>Aftesia e Dyte e detyruar:<span>*</span></p>
+            <input id="create-job-skill2" class="skill skill2" spellcheck="false" style="width:100%;" type="text"/>
+            <p>Aftesia e Trete e detyruar:<span>*</span></p>
+            <input id="create-job-skill3" class="skill skill3" spellcheck="false" style="width:100%;" type="text"/>
+            <div class="create_job_attributes">
+                <div>
+                    <p>Vendos Pagen (e rekomanduar)</p>
+                    <input id="create-job-salary" type="text" spellcheck="false">
+                </div>
+                <div>
+                    <p>Orari i punes (e rekomanduar)</p>
+                    <input id="create-job-schedule" type="text" spellcheck="false" placeholder="Monday - Friday 09:00 - 17:00">
+                </div>
+            </div>
+            <p id="create-warning" style="display:none;font-style: italic;">Ti duhet te mbushesh te gjitha vendet me ikonen <span>*</span> sign</p>
+            <button id="create-job">Postoje Punen Tani!</button> 
+            <div class="close_create_form"><i class="fa fa-times"></i></div>
+        </div>
+
+        
+                <!-- Login Form-->
+
+            <div class="login_form">
+            <h3>Login Form</h3>
+            <p>Email or Phone</p>
+            <input id="username-input" spellcheck="false" type="text">
+            <span class="form_warning">Emaili ose Passwordi eshte gabim!! Hint:Admin , password</span>
+            <p>Password</p>
+            <input id="password-input" spellcheck="false" type="password">
+            <a id="forgot-pass" href="#">Forgot password?</a><br>
+            <button id="loginBtn">LOGIN</button><br>
+            <p class="bottom_form">Not a member?<a href="#">Sign up now</a></p>
+            <div class="close_form"><i class="fa fa-times"></i></div>
+        </div>
+        <!-- Display the Job Information after clicking on the-->
+        <div class="job_display_form">
+            <div class="job_image"><h1 class="job_form_heading"></h1>
+                <div class="close_job_form"><i class="fa fa-times"></i></div></div>
+            <div class="job_form_content">
+                <p class="job_form_p"></p>
+                <p style="margin:10px 20px;font-weight: bold;">Applikantet duhet te permbushin keto kritere pune: </p>
+                <ul style="margin:0px 40px">
+                    <li class="display_skill1"></li>
+                    <li class="display_skill2"></li>
+                    <li class="display_skill3"></li>
+                </ul>
+                <div class="info"><span id="salary"></span>|<span id="schedule"></span></div>
+                <button id="apply-for-job">APLIKO TANI!</button>
+            </div>
+        </div>
+
+        <div class="apply_form">
+            <h2>Duke Aplikuar per Pune</h2>
+            <p>Vendos Emer / Mbiemer<span>*</span></p>
+            <input  style="width:100%;" spellcheck="false" type="text"/>
+            <div class="create_job_attributes">
+                <div>
+                    <p>Vendos vendndodhjen tuaj<span>*</span></p>
+                    <input  type="text" spellcheck="false" placeholder="Full name...">
+                </div>
+
+                <div>
+                    <p>Vendos Nr.Tel ose Email<span>*</span></p>
+                    <input  type="text" spellcheck="false" placeholder="Address , City , Country">
+                </div>
+            </div> 
+            <div class="create_job_attributes">
+                <div>
+                    <p>Paga qe ju kerkoni</p>
+                    <input  type="text" spellcheck="false">
+                </div>
+                <div>
+                    <p>Orari kur jeni i disponueshem</p>
+                    <input  type="text" spellcheck="false" placeholder="E Hene - E Premte 09:00 - 17:00">
+                </div>
+            </div>
+            <button id="apply-button" style="width:100%;color:white;background: green;font-weight:bold;border:none;font-size:1.2rem;cursor:pointer;">Finish Application</button> 
+            <div class="close_create_form"><i class="fa fa-times"></i></div>
+        </div>
+        <!-- This secion above contains hidden forms -->
+
+
+        <div class="search">
+            <input spellcheck="false" class="title"  type="text" placeholder="Titulli / Profesioni"/>
+
+            <div class="suggested_title">   </div>
+            <input spellcheck="false" class="location" type="text" placeholder="Vendodhja"/>
+            <div class="suggested_location">  </div>
+            <button id="search-btn">Kerko Per Pune</button>
+        </div>
+
+        <div class="content">
+            <div class="jobs">
+                <div class="top_information">
+                    <div style="display:inline" class="filter">Filter<i id="filter_icon" class="fas fa-angle-down"></i></div>
+                    <span>3 <span style="color:gray">Pune</span></span>
+                    
+                </div>
+
+        <!-- Displaying JOBS =>>>> -->    <div class="display_jobs"></div>
+                
+            </div>
+
+
+
+        <!-- BLOG SECTION IS UNDER HERE -->
+
+
+            <div class="blogs">
+                <div class="blogs_h">Blogjet e fundit</div>
+                    <div id="display-jobs">
+
+                    </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<script type="module" src="./jobs.js"></script>
+<script type="module" src="./blogs.js"></script>
+<script type="module" src="./functioning.js"></script>
+</html>
